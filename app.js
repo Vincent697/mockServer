@@ -7,15 +7,15 @@ var app = express();
 
 var apiRoutes = express.Router();
 
-var  appData=require("./data/data.json");
-
+var appData=require("./data/data.json");
+var inviteDate=appData.invite;
 // Express Routers
 // http://localhost:3000/api/getstatus
-apiRoutes.get('/getstatus', function (req, res) {
+apiRoutes.get('/invite', function (req, res) {
 	res.json({
 		code: 1,
 		msg: "success",
-		data: appData.goods
+		data: inviteDate
 	});
 });
 
